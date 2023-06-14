@@ -9,8 +9,11 @@
     scroll-behavior: smooth;
 }
 
+::selection {
 
-
+    background :#00FFCA;
+  }
+  
 
 @media only screen and (min-width: 1024px){
 
@@ -398,6 +401,13 @@ color: white;
 }
 
 
+#footer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #cbd5e1;
+}
+
 }
 
 
@@ -412,3 +422,5 @@ color: white;
         left: 20%;
     }
 }
+
+
