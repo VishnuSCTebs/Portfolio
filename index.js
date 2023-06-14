@@ -1,20 +1,22 @@
 const gradientCursor=document.getElementById("gradient-cursor")
-// const navLinks=document.querySelectorAll(".app__intro__navigation-link")
+const navLinks=document.querySelectorAll(".app__intro__navigation-link")
+const navLines=document.querySelectorAll(".app__intro__navigation-item")
+// console.log(gradientCursor);
+var active=0;
+navLinks[active].firstElementChild.classList.add("active-link")
 
-// // console.log(gradientCursor);
-// var active=0;
+const options=["HOME","EXPERIENCE","PROJECTS"]
 
-// console.log(navLinks)
-// for(var i=0;i<navLinks.length;i++){
+const activateNavigation=(e)=>{
 
-//     navLinks[i].addEventListener("click",()=>{
+    active=options.indexOf(e.target.innerText)
+}
+console.log(navLinks)
+for(var i=0;i<navLinks.length;i++){
+
+    navLinks[i].addEventListener("click",activateNavigation)
     
-            
-//     })
-    
-// }
-
-// console.log(document.getElementById("gradient-cursor"))
+}
 
 window.addEventListener("mousemove",(e)=>{
     const x=e.clientX + document.body.scrollLeft
